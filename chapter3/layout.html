@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <title>레이아웃</title>
+        <link rel = "stylesheet" href = "./layout.css">
+    </head>
+    <body>
+        <div id = "header">
+            <h3>레이아웃 만들기</h3>
+            <div id = "searchBar" >
+                <input type = "text" />
+            </div>
+            <button>뉴스</button>
+            <button>날씨</button>
+            <button>스포츠</button>
+            <button>영화</button>
+            <button>더보기</button>
+        </div>
+        <div id = "contents">
+            <h3>레이아웃 내용 예제</h3>
+        </div>
+        <div id = "footer">
+            <a href = "https://www.hansei.ac.kr/sites/kor/index.do">한세대학교</a>
+        </div>
+
+        <script>
+            console.log(1 + 1);
+            var name = "PJJ";
+            var age = 10;
+            var birth; 
+            console.log(birth === undefined);
+            var ex = null;
+
+            // Object
+            var person = {
+                name  : "",
+                age : 10,
+                tall : 180,
+                gender : "female",
+                run : function () {
+                    console.log("run!!!!!");
+                }
+            };
+
+            console.log("person", person.run());
+
+            // []
+            // 더하기
+            function add(a, b) {
+                return a + b;
+            }
+
+            // 곱하기
+            function multi(a, b) {
+                return a * b;
+            }
+
+            // 나누기
+            function div(a, b) {
+                return a / b;
+            }
+
+            // 나머지 구하기
+            function rim(a, b) {
+                return a % b;
+            }
+
+            var result = rim(7, 3);
+            console.log(result);
+
+/*             const age = 10;
+            console.log(age);
+ */
+
+/*             let age;
+
+            age = 10;
+            console.log(age);
+
+            age = 20;
+            console.log(age);
+
+            age = "나이";
+            console.log(age);
+ */
+
+/*             var = name; 
+            console.log(name);
+
+            name = "PJJ";
+            console.log(name);
+
+            name = "UNKNWON";
+            console.log(name);
+
+            name= 123;
+            console.log(name);
+ */
+        </script>
+    </body>
+</html>
