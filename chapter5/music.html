@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>music</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <style>
+            #title_layout {
+                margin-top: 75px;
+                height: 75px;
+                font-size: 200%;
+                text-align: center;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            #button_layout {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+
+            #card_layout {
+              margin-left: 350px;
+              margin-right: 350px;
+            }
+
+            #music_img {
+              width: 150px;
+              height: 150px;
+            }
+
+            .card-img-top {
+              display: block;
+              margin: auto;
+              margin-top: 10px;
+            }
+
+        </style>
+        <link rel="icon" href="./iconImg.svg">
+
+    </head>
+    <body>
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../main/main.html">We can go whenever you like</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">페이지 목록</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="../main/main.html">Main</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../profile/profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./music.html">Music</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../video/video.html">Video</a>
+                </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+        <div id = "title_layout">
+            <h1 class="fw-bold">Music (HANNI)</h1>
+        </div>
+        <hr style="margin-bottom: 25px;">
+        <div id = "button_layout">
+          <button id = "music_button" class="btn btn-dark" type="button"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">노래 추천</button>
+        </div>
+        <div class="card-group card text-center" id = "card_layout">
+          <div class="card">
+            <img id = "music_img" src="./music1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Hype Boy</h5>
+              <p class="card-text">
+                • 빠져버리는 daydream
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">하니 작사</small>
+            </div>
+          </div>
+          <div class="card">
+            <img id = "music_img" src="./music2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">OMG</h5>
+              <p class="card-text">
+                • 너만 생각나 24<br>• 내 맘이 끝이 없는 걸
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">하니 작사</small>
+            </div>
+          </div>
+          
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id = "modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" id = "btnCopy">복사</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>        
+        <script>
+          
+          // fetch('https://itunes.apple.com/lookup?id=1635469693&entity=song')
+          // .then(function(response) {
+          //     return response.json();
+          // })
+          // .then((json) => {
+          //   for (let i = 1; i < json["results"].length; i++) {
+          //     console.log(json["results"][i]["trackName"]);
+          //   }
+
+          //   function musicClick() {
+          //   var numberIndex = Math.floor(Math.random() * json["results"].length) + 1;
+          //   const mbody = document.querySelector("#modal-body");
+          //   let trs = ''
+          //   trs += `<h5>${json["results"][numberIndex]["trackName"]}</h5>`
+          //   mbody.innerHTML = trs;
+
+          //   var btnCopy = document.querySelector("#btnCopy");
+          //   btnCopy.addEventListener("click", () => {
+          //       navigator.clipboard.writeText
+          //       (json["results"][numberIndex]["trackName"]).then(
+          //           () => {}
+          //       );
+          //   })}
+
+          // var musicButton = document.querySelector("#music_button");
+          // musicButton.addEventListener("click", musicClick);
+
+          // });
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      </body>
+</html>
